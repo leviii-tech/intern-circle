@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alex Morgan — Senior Full-Stack Engineer & UI/UX Architect crafting scalable web apps, high-performance systems, and delightful digital experiences.">
+  <meta name="keywords" content="Alex Morgan, Portfolio, Full Stack Developer, Frontend Engineer, UI/UX Architect, JavaScript, TypeScript, React, Node.js">
+  <meta name="author" content="Alex Morgan">
+  <meta name="theme-color" content="#0b0f19">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alex Morgan | Full-Stack Developer & UI/UX Architect">
+  <meta property="og:description" content="Explore personal projects, technical skills, engineering background, and interactive resume.">
+  <meta property="og:image" content="assets/images/avatar.jpg">
+
+  <title>Alex Morgan | Full-Stack Developer & UI/UX Architect</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Alex Morgan Portfolio Home">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Alex<span class="highlight">.dev</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle & CTA) -->
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle Color Theme" title="Toggle theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Resume Modal Trigger Button -->
+        <button id="open-resume-btn" class="btn btn-secondary btn-sm" aria-label="View Resume">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-glow-sphere sphere-1" aria-hidden="true"></div>
+      <div class="hero-glow-sphere sphere-2" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span class="status-text">Available for Full-time Roles &amp; High-Impact Projects</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-title">
+            Hi, I'm <span class="gradient-text">Alex Morgan</span>
+            <span class="role-wrapper">
+              <span class="role-static">Building</span>
+              <span class="role-dynamic" id="role-text">exceptional web apps</span>
+              <span class="cursor-blink">|</span>
+            </span>
+          </h1>
+
+          <p class="hero-description">
+            Passionate software engineer specializing in modern TypeScript, full-stack web development, and cloud architectures. I transform complex engineering problems into fast, elegant, and user-centric digital products.
+          </p>
+
+          <!-- Hero CTAs -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Let's Talk</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </a>
+          </div>
+
+          <!-- Hero Social Quick Links -->
+          <div class="hero-social-block">
+            <span class="social-label">Connect:</span>
+            <div class="social-links-row" role="list">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter X Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+              </a>
+              <a href="mailto:alex.morgan.dev@example.com" class="social-icon-btn" aria-label="Send Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Profile Card -->
+        <div class="hero-visual">
+          <div class="profile-card-glass">
+            <div class="card-glow-border"></div>
+            
+            <div class="profile-image-container">
+              <img src="assets/images/avatar.jpg" alt="Portrait of Alex Morgan, Developer" class="profile-avatar-img" width="380" height="380">
+              <div class="tech-badge-floating badge-top-right">
+                <span class="badge-icon">⚡</span>
+                <span class="badge-text">React &amp; Node</span>
+              </div>
+              <div class="tech-badge-floating badge-bottom-left">
+                <span class="badge-icon">🚀</span>
+                <span class="badge-text">Fast &amp; Scalable</span>
+              </div>
+            </div>
+
+            <!-- Profile Summary Info Strip -->
+            <div class="profile-meta-strip">
+              <div class="meta-item">
+                <span class="meta-val">4+</span>
+                <span class="meta-lbl">Years Experience</span>
+              </div>
+              <div class="meta-divider"></div>
+              <div class="meta-item">
+                <span class="meta-val">30+</span>
+                <span class="meta-lbl">Projects Shipped</span>
+              </div>
+              <div class="meta-divider"></div>
+              <div class="meta-item">
+                <span class="meta-val">99.9%</span>
+                <span class="meta-lbl">Code Quality</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section section-padding" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get To Know Me</span>
+          <h2 id="about-title" class="section-title">Engineering With Purpose &amp; Precision</h2>
+          <p class="section-description">
+            I bridge the gap between creative visual design and robust backend engineering, crafting complete end-to-end web experiences that scale.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio Narrative -->
+          <div class="about-story-card card-glass">
+            <h3 class="about-card-title">
+              <span class="title-icon">💡</span> My Journey &amp; Philosophy
+            </h3>
+            <p class="story-text">
+              I started coding over 4 years ago with a simple curiosity for how pixels turn into dynamic interactive software. Today, I build production-grade web applications, RESTful microservices, and reactive user interfaces that serve thousands of daily users.
+            </p>
+            <p class="story-text">
+              My engineering philosophy revolves around three foundational pillars: <strong>clean maintainable architecture</strong>, <strong>frictionless user experience</strong>, and <strong>continuous iterative delivery</strong>. Whether tuning SQL queries or refining CSS micro-interactions, I treat every detail with craftsmanship.
+            </p>
+
+            <div class="about-key-points">
+              <div class="key-point-item">
+                <div class="point-icon">🎯</div>
+                <div>
+                  <h4>Goal-Driven Architecture</h4>
+                  <p>Building resilient, scalable codebases structured for longevity.</p>
+                </div>
+              </div>
+              <div class="key-point-item">
+                <div class="point-icon">⚡</div>
+                <div>
+                  <h4>Performance-First Mindset</h4>
+                  <p>Obsessed with sub-second load times, 100 Lighthouse scores, and accessible layouts.</p>
+                </div>
+              </div>
+              <div class="key-point-item">
+                <div class="point-icon">🤝</div>
+                <div>
+                  <h4>Collaborative Problem Solver</h4>
+                  <p>Clear communicator who thrives in agile, cross-functional engineering teams.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Snippet / Terminal Bio -->
+          <div class="terminal-card card-glass">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">alex_profile.ts</div>
+              <div class="terminal-actions">
+                <span class="terminal-badge">TypeScript</span>
+              </div>
+            </div>
+
+            <div class="terminal-body">
+              <pre><code><span class="code-keyword">interface</span> <span class="code-type">DeveloperProfile</span> {
+  name: <span class="code-string">string</span>;
+  role: <span class="code-string">string</span>;
+  location: <span class="code-string">string</span>;
+  interests: <span class="code-string">string[]</span>;
+  currentlyBuilding: <span class="code-string">string</span>;
+  coffeeToCodeRatio: <span class="code-number">Infinity</span>;
+}
+
+<span class="code-keyword">const</span> <span class="code-variable">developer</span>: <span class="code-type">DeveloperProfile</span> = {
+  name: <span class="code-string">"Alex Morgan"</span>,
+  role: <span class="code-string">"Full Stack Web Engineer"</span>,
+  location: <span class="code-string">"San Francisco, CA (Open to Remote)"</span>,
+  interests: [
+    <span class="code-string">"Design Systems"</span>,
+    <span class="code-string">"Distributed Systems"</span>,
+    <span class="code-string">"Open Source"</span>,
+    <span class="code-string">"Cloud Native Architecture"</span>
+  ],
+  currentlyBuilding: <span class="code-string">"Next-Gen AI Developer Tools"</span>,
+  coffeeToCodeRatio: <span class="code-keyword">Infinity</span>
+};
+
+<span class="code-comment">// Let's build something remarkable together!</span>
+<span class="code-keyword">export default</span> developer;</code></pre>
+            </div>
+
+            <div class="terminal-footer">
+              <div class="terminal-status">
+                <span class="pulse-indicator"></span> Ready to collaborate
+              </div>
+              <button id="copy-code-btn" class="btn-terminal-action" aria-label="Copy code to clipboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy Bio Code</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tech Stack Section -->
+    <section id="skills" class="skills-section section-padding" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Technical Competencies</span>
+          <h2 id="skills-title" class="section-title">Skills &amp; Technology Stack</h2>
+          <p class="section-description">
+            A comprehensive overview of my technical toolkit, methodologies, and framework proficiencies honed through real-world projects.
+          </p>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="skills-filter-tabs" role="tablist" aria-label="Skill categories">
+          <button class="skill-tab-btn active" role="tab" aria-selected="true" data-category="all">All Skills</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-category="frontend">Frontend &amp; UI</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-category="backend">Backend &amp; APIs</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-category="database">Databases &amp; Cloud</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-category="tools">Tools &amp; Workflow</button>
+        </div>
+
+        <!-- Skills Cards Grid -->
+        <div class="skills-grid" id="skills-container">
+          
+          <!-- Category 1: Frontend & UI -->
+          <article class="skill-card card-glass" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap icon-purple">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">HTML5 / CSS3 / Flexbox &amp; Grid</h3>
+                <span class="skill-level-text">Expert Proficiency</span>
+              </div>
+            </div>
+            <p class="skill-desc">Semantic document layouts, modern CSS variables, responsive typography, complex grid systems, and smooth GPU-accelerated animations.</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--skill-percent: 95%;"></div>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-chip">Semantic HTML</span>
+              <span class="skill-chip">CSS Grid</span>
+              <span class="skill-chip">Flexbox</span>
+              <span class="skill-chip">Responsive Design</span>
+            </div>
+          </article>
+
+          <article class="skill-card card-glass" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap icon-cyan">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4 7.55 4.24a1.78 1.78 0 0 0-2.5 1.55v12.42a1.78 1.78 0 0 0 2.5 1.55L16.5 14.6a1.78 1.78 0 0 0 0-3.2z"></path></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">JavaScript (ES6+) &amp; TypeScript</h3>
+                <span class="skill-level-text">Advanced Proficiency</span>
+              </div>
+            </div>
+            <p class="skill-desc">Deep knowledge of asynchronous programming, DOM APIs, strict typing, interfaces, closures, and modular architecture.</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--skill-percent: 92%;"></div>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-chip">TypeScript</span>
+              <span class="skill-chip">Async/Await</span>
+              <span class="skill-chip">DOM Manipulation</span>
+              <span class="skill-chip">Web APIs</span>
+            </div>
+          </article>
+
+          <article class="skill-card card-glass" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap icon-emerald">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12a4 4 0 0 1 8 0"></path><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">React.js &amp; Next.js Ecosystem</h3>
+                <span class="skill-level-text">Advanced Proficiency</span>
+              </div>
+            </div>
+            <p class="skill-desc">Component-driven architecture, custom hooks, state management, server components, SSR/SSG, and performance optimization.</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--skill-percent: 90%;"></div>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-chip">React 18</span>
+              <span class="skill-chip">Next.js</span>
+              <span class="skill-chip">State Hooks</span>
+              <span class="skill-chip">SPA Architecture</span>
+            </div>
+          </article>
+
+          <!-- Category 2: Backend & APIs -->
+          <article class="skill-card card-glass" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap icon-amber">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Node.js &amp; Express REST APIs</h3>
+                <span class="skill-level-text">Advanced Proficiency</span>
+              </div>
+            </div>
+            <p class="skill-desc">Robust backend services, middleware design, JWT authentication, rate limiting, and event-driven architecture.</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--skill-percent: 88%;"></div>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Express</span>
+              <span class="skill-chip">RESTful APIs</span>
+              <span class="skill-chip">JWT Auth</span>
+            </div>
+          </article>
+
+          <!-- Category 3: Databases & Cloud -->
+          <article class="skill-card card-glass" data-category="database">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap icon-rose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">PostgreSQL &amp; MongoDB &amp; Redis</h3>
+                <span class="skill-level-text">Proficient</span>
+              </div>
+            </div>
+            <p class="skill-desc">Schema modeling, indexing strategies, complex relational joins, document stores, and in-memory caching layers.</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--skill-percent: 85%;"></div>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-chip">PostgreSQL</span>
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">Prisma ORM</span>
+              <span class="skill-chip">Redis Caching</span>
+            </div>
+          </article>
+
+          <!-- Category 4: Tools & DevOps -->
+          <article class="skill-card card-glass" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap icon-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Git, Docker &amp; CI/CD Pipelines</h3>
+                <span class="skill-level-text">Advanced Proficiency</span>
+              </div>
+            </div>
+            <p class="skill-desc">Version control best practices, branch workflows, containerization, automated testing, and GitHub Actions deployments.</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--skill-percent: 89%;"></div>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-chip">Git / GitHub</span>
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">CI/CD Actions</span>
+              <span class="skill-chip">Vercel / AWS</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects-section section-padding" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Portfolio Showcase</span>
+          <h2 id="projects-title" class="section-title">Featured Engineering Projects</h2>
+          <p class="section-description">
+            A curated collection of real-world applications showcasing responsive UI design, scalable backend integration, and polished user experiences.
+          </p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filter-controls">
+          <button class="project-filter-btn active" data-filter="all">All Projects (3)</button>
+          <button class="project-filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="project-filter-btn" data-filter="frontend">Frontend &amp; UI</button>
+          <button class="project-filter-btn" data-filter="tools">Developer Tools</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-container">
+          
+          <!-- Project 1: Aurora AI Analytics -->
+          <article class="project-card card-glass" data-type="fullstack frontend">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-1.jpg" alt="Aurora AI Analytics Dashboard Interface" class="project-img" loading="lazy" width="600" height="340">
+              <div class="project-overlay">
+                <button class="btn-quick-view" data-project-id="1" aria-label="Quick View Aurora AI Project Details">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>Quick Case Study</span>
+                </button>
+              </div>
+              <span class="project-badge badge-fullstack">Full-Stack AI</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag-pill">React</span>
+                <span class="tag-pill">TypeScript</span>
+                <span class="tag-pill">Node.js</span>
+                <span class="tag-pill">Chart.js</span>
+                <span class="tag-pill">PostgreSQL</span>
+              </div>
+
+              <h3 class="project-title">Aurora AI Analytics SaaS</h3>
+              <p class="project-synopsis">
+                An intelligent data visualization platform offering real-time model accuracy metrics, predictive time-series charts, and customizable executive dashboards.
+              </p>
+
+              <div class="project-features-list">
+                <div class="feature-item">
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Real-time WebSocket telemetry charts</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Sub-100ms dashboard queries with Redis cache</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <a href="#demo" class="btn-link-action live-demo-trigger" data-project-title="Aurora AI Analytics SaaS" aria-label="Launch Live Demo for Aurora AI">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span>Live Demo</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-link-action" aria-label="View Aurora AI GitHub Repository">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Source Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: QuantumTrade FinTech -->
+          <article class="project-card card-glass" data-type="fullstack frontend">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-2.jpg" alt="QuantumTrade FinTech Platform Interface" class="project-img" loading="lazy" width="600" height="340">
+              <div class="project-overlay">
+                <button class="btn-quick-view" data-project-id="2" aria-label="Quick View QuantumTrade Project Details">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>Quick Case Study</span>
+                </button>
+              </div>
+              <span class="project-badge badge-fintech">FinTech / Web3</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag-pill">Next.js</span>
+                <span class="tag-pill">Tailwind CSS</span>
+                <span class="tag-pill">WebSockets</span>
+                <span class="tag-pill">GraphQL</span>
+              </div>
+
+              <h3 class="project-title">QuantumTrade Asset Exchange</h3>
+              <p class="project-synopsis">
+                A high-speed cryptocurrency &amp; multi-asset portfolio dashboard featuring interactive candlestick charts, instant order books, and real-time PnL trackers.
+              </p>
+
+              <div class="project-features-list">
+                <div class="feature-item">
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Interactive 60fps Candlestick rendering</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>End-to-end encrypted transaction flow</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <a href="#demo" class="btn-link-action live-demo-trigger" data-project-title="QuantumTrade Asset Exchange" aria-label="Launch Live Demo for QuantumTrade">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span>Live Demo</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-link-action" aria-label="View QuantumTrade GitHub Repository">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Source Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Nimbus Dev Studio -->
+          <article class="project-card card-glass" data-type="tools fullstack">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-3.jpg" alt="Nimbus Dev Studio API Workspace Interface" class="project-img" loading="lazy" width="600" height="340">
+              <div class="project-overlay">
+                <button class="btn-quick-view" data-project-id="3" aria-label="Quick View Nimbus Dev Studio Project Details">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>Quick Case Study</span>
+                </button>
+              </div>
+              <span class="project-badge badge-tools">Dev Tools</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag-pill">Electron</span>
+                <span class="tag-pill">TypeScript</span>
+                <span class="tag-pill">Monaco Editor</span>
+                <span class="tag-pill">Docker</span>
+              </div>
+
+              <h3 class="project-title">Nimbus Dev Studio &amp; API Workspace</h3>
+              <p class="project-synopsis">
+                An extensible cloud workspace for inspecting REST/GraphQL endpoints, live mock server simulation, and real-time team collaboration.
+              </p>
+
+              <div class="project-features-list">
+                <div class="feature-item">
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Monaco-powered syntax editor &amp; JSON formatter</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Instant environment variable sync across teams</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <a href="#demo" class="btn-link-action live-demo-trigger" data-project-title="Nimbus Dev Studio &amp; API Workspace" aria-label="Launch Live Demo for Nimbus Studio">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span>Live Demo</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-link-action" aria-label="View Nimbus Dev Studio GitHub Repository">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Source Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline Section -->
+    <section id="experience" class="experience-section section-padding" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Career Path</span>
+          <h2 id="experience-title" class="section-title">Experience &amp; Education</h2>
+          <p class="section-description">
+            A chronological timeline of my professional roles, academic background, and impactful milestones.
+          </p>
+        </div>
+
+        <!-- Timeline Toggle Buttons -->
+        <div class="timeline-switch-wrap">
+          <button class="timeline-switch-btn active" id="tab-work" data-target="work-timeline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            <span>Work Experience</span>
+          </button>
+          <button class="timeline-switch-btn" id="tab-edu" data-target="edu-timeline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <span>Education &amp; Certifications</span>
+          </button>
+        </div>
+
+        <!-- Work Experience Timeline -->
+        <div class="timeline-container active" id="work-timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content card-glass">
+              <div class="timeline-meta-header">
+                <div>
+                  <h3 class="role-heading">Senior Full-Stack Software Engineer</h3>
+                  <div class="company-name">Nexus Cloud Solutions • San Francisco, CA</div>
+                </div>
+                <span class="timeline-date-badge">2023 — Present</span>
+              </div>
+              <p class="timeline-summary">
+                Lead developer for customer-facing analytics dashboards and serverless microservices handling over 2M daily API events.
+              </p>
+              <ul class="timeline-achievements">
+                <li>Architected modular React/TypeScript frontend components, improving page render speeds by 42%.</li>
+                <li>Engineered resilient Node.js backend pipelines with Redis cache, reducing database read latency by 60%.</li>
+                <li>Mentored 4 junior engineers on clean code practices, unit testing with Vitest, and PR review hygiene.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="skill-chip">TypeScript</span>
+                <span class="skill-chip">React</span>
+                <span class="skill-chip">Node.js</span>
+                <span class="skill-chip">PostgreSQL</span>
+                <span class="skill-chip">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content card-glass">
+              <div class="timeline-meta-header">
+                <div>
+                  <h3 class="role-heading">Frontend &amp; UI Developer</h3>
+                  <div class="company-name">PixelForge Digital Agency • Remote</div>
+                </div>
+                <span class="timeline-date-badge">2021 — 2023</span>
+              </div>
+              <p class="timeline-summary">
+                Built responsive web applications, design systems, and headless CMS integrations for tier-one client brands.
+              </p>
+              <ul class="timeline-achievements">
+                <li>Delivered 18+ high-converting responsive web apps with 100% cross-browser fidelity across all viewports.</li>
+                <li>Constructed a custom Vanilla CSS / SCSS design system tokens library reducing design debt across teams.</li>
+                <li>Implemented WCAG 2.1 AA accessibility guidelines, passing stringent client compliance audits.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="skill-chip">HTML5 / CSS3</span>
+                <span class="skill-chip">JavaScript (ES6+)</span>
+                <span class="skill-chip">UI/UX</span>
+                <span class="skill-chip">REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Education & Certifications Timeline -->
+        <div class="timeline-container hidden" id="edu-timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content card-glass">
+              <div class="timeline-meta-header">
+                <div>
+                  <h3 class="role-heading">B.S. in Computer Science &amp; Software Engineering</h3>
+                  <div class="company-name">University of California • GPA: 3.85 / 4.0</div>
+                </div>
+                <span class="timeline-date-badge">2017 — 2021</span>
+              </div>
+              <p class="timeline-summary">
+                Comprehensive coursework in Data Structures &amp; Algorithms, Database Systems, Distributed Architecture, and Web Engineering.
+              </p>
+              <div class="timeline-tags">
+                <span class="skill-chip">Algorithms</span>
+                <span class="skill-chip">Web Engineering</span>
+                <span class="skill-chip">Operating Systems</span>
+                <span class="skill-chip">Data Architecture</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content card-glass">
+              <div class="timeline-meta-header">
+                <div>
+                  <h3 class="role-heading">AWS Certified Solutions Architect &amp; Meta Frontend Specialization</h3>
+                  <div class="company-name">Amazon Web Services &amp; Meta Certifications</div>
+                </div>
+                <span class="timeline-date-badge">2022</span>
+              </div>
+              <p class="timeline-summary">
+                Verified mastery in cloud architecture, serverless infrastructure, React application state patterns, and frontend security best practices.
+              </p>
+              <div class="timeline-tags">
+                <span class="skill-chip">AWS Cloud</span>
+                <span class="skill-chip">React Architecture</span>
+                <span class="skill-chip">Web Security</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Resume Download CTA Strip -->
+        <div class="resume-cta-strip card-glass">
+          <div class="cta-strip-text">
+            <h3>Looking for a complete printable resume?</h3>
+            <p>Download my updated ATS-friendly PDF resume or preview the live digital version.</p>
+          </div>
+          <div class="cta-strip-actions">
+            <button id="preview-resume-strip-btn" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              <span>Preview Digital Resume</span>
+            </button>
+            <button id="download-cv-btn" class="btn btn-outline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download CV (PDF)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Impact & Metrics Section -->
+    <section id="stats" class="stats-section section-padding" aria-label="Key Achievements and Performance Metrics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card card-glass">
+            <div class="stat-number" data-target="4">4+</div>
+            <div class="stat-label">Years of Experience</div>
+            <div class="stat-sub">Designing &amp; shipping code</div>
+          </div>
+          <div class="stat-card card-glass">
+            <div class="stat-number" data-target="35">35+</div>
+            <div class="stat-label">Completed Projects</div>
+            <div class="stat-sub">Across Web, AI &amp; Cloud</div>
+          </div>
+          <div class="stat-card card-glass">
+            <div class="stat-number" data-target="15000">15k+</div>
+            <div class="stat-label">Git Commits</div>
+            <div class="stat-sub">Consistent contribution</div>
+          </div>
+          <div class="stat-card card-glass">
+            <div class="stat-number" data-target="100">100%</div>
+            <div class="stat-label">Responsive Fidelity</div>
+            <div class="stat-sub">Mobile, tablet &amp; desktop</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="contact-section section-padding" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 id="contact-title" class="section-title">Let's Build Something Great Together</h2>
+          <p class="section-description">
+            Have a project in mind, an open role on your team, or just want to discuss web engineering? I'd love to hear from you.
+          </p>
+        </div>
+
+        <div class="contact-layout-grid">
+          
+          <!-- Contact Info Channels -->
+          <div class="contact-info-panel card-glass">
+            <h3 class="panel-heading">Contact Information</h3>
+            <p class="panel-text">
+              Feel free to send a direct message, connect on professional networks, or copy my email address with one click.
+            </p>
+
+            <div class="contact-channels-list">
+              <!-- Email Item with Instant Copy -->
+              <div class="channel-card">
+                <div class="channel-icon-wrap icon-purple">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-title">Direct Email</span>
+                  <span class="channel-val" id="email-address-text">alex.morgan.dev@example.com</span>
+                </div>
+                <button id="copy-email-btn" class="btn-copy-chip" aria-label="Copy email address to clipboard" title="Copy email">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span class="copy-text">Copy</span>
+                </button>
+              </div>
+
+              <!-- Location & Timezone -->
+              <div class="channel-card">
+                <div class="channel-icon-wrap icon-cyan">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-title">Location &amp; Availability</span>
+                  <span class="channel-val">San Francisco, CA • PST (UTC-8)</span>
+                  <span class="channel-sub">Open to worldwide remote &amp; hybrid roles</span>
+                </div>
+              </div>
+
+              <!-- Social Handles Grid -->
+              <div class="social-channels-box">
+                <span class="channel-title">Follow &amp; Connect:</span>
+                <div class="social-pill-group">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    <span>Twitter/X</span>
+                  </a>
+                  <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="social-pill-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    <span>Dev.to Blog</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-panel card-glass">
+            <h3 class="panel-heading">Send a Message</h3>
+            <p class="panel-text">Fill out this quick form and I will respond within 24 business hours.</p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name <span class="required-star">*</span></label>
+                  <div class="input-wrapper">
+                    <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Jane Doe" required autocomplete="name">
+                    <span class="input-focus-border"></span>
+                  </div>
+                  <span class="form-error-msg" id="name-error">Please enter your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Email Address <span class="required-star">*</span></label>
+                  <div class="input-wrapper">
+                    <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. jane@company.com" required autocomplete="email">
+                    <span class="input-focus-border"></span>
+                  </div>
+                  <span class="form-error-msg" id="email-error">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject / Inquiry Type</label>
+                <div class="input-wrapper">
+                  <select id="form-subject" name="subject" class="form-input select-input">
+                    <option value="opportunity">Full-time / Contract Job Opportunity</option>
+                    <option value="freelance">Freelance Web Project</option>
+                    <option value="mentorship">Mentorship / Technical Advice</option>
+                    <option value="hello">Just saying hello!</option>
+                  </select>
+                  <span class="input-focus-border"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Your Message <span class="required-star">*</span></label>
+                <div class="input-wrapper">
+                  <textarea id="form-message" name="message" class="form-input textarea-input" rows="5" placeholder="Tell me about your project, timeline, or open role..." required></textarea>
+                  <span class="input-focus-border"></span>
+                </div>
+                <div class="textarea-footer">
+                  <span class="form-error-msg" id="message-error">Please write a brief message (minimum 10 characters).</span>
+                  <span class="char-counter" id="char-counter">0 / 500</span>
+                </div>
+              </div>
+
+              <button type="submit" id="submit-form-btn" class="btn btn-primary btn-block">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-spinner hidden" aria-hidden="true"></span>
+                <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo" aria-label="Alex Morgan Portfolio">
+            <span class="logo-symbol">&lt;/&gt;</span>
+            <span class="logo-text">Alex<span class="highlight">.dev</span></span>
+          </a>
+          <p class="footer-tagline">Crafting resilient web experiences with modern HTML, CSS &amp; JavaScript.</p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills &amp; Tech</a></li>
+            <li><a href="#projects">Portfolio Projects</a></li>
+            <li><a href="#experience">Experience &amp; Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Social Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+            <li><a href="https://dev.to" target="_blank" rel="noopener noreferrer">Dev.to Articles</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> Alex Morgan. Built with semantic HTML5 &amp; Modern CSS.
+        </p>
+        
+        <div class="footer-badge-wrap">
+          <span class="footer-tech-badge">⚡ 100% Responsive</span>
+          <span class="footer-tech-badge">✨ CSS Flex &amp; Grid</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Scroll back to top" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Interactive Project Detail Case Study Modal -->
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-card card-glass">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-body" id="modal-project-body">
+        <!-- Injected via JavaScript based on selected project -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Digital Resume Modal -->
+  <div id="resume-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-resume-title">
+    <div class="modal-card resume-modal-card card-glass">
+      <div class="resume-modal-header">
+        <div>
+          <h2 id="modal-resume-title" class="resume-modal-title">Alex Morgan — Full-Stack Resume</h2>
+          <p class="resume-modal-subtitle">Web Engineer • UI/UX Architect • San Francisco, CA</p>
+        </div>
+        <div class="resume-modal-actions">
+          <button id="print-resume-btn" class="btn btn-secondary btn-sm" aria-label="Print or Save PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="modal-close-btn" id="resume-close-btn" aria-label="Close resume modal">&times;</button>
+        </div>
+      </div>
+
+      <div class="resume-document-content" id="printable-resume">
+        <!-- Resume Summary -->
+        <div class="resume-section-block">
+          <h3 class="resume-block-title">Executive Summary</h3>
+          <p class="resume-text">
+            Results-driven Full-Stack Software Engineer with 4+ years of experience designing, architecting, and scaling high-performance web applications. Specialized in TypeScript, React, Node.js, and modern CSS layout architectures. Proven track record of optimizing page load times by 40%+ and improving user retention across SaaS platforms.
+          </p>
+        </div>
+
+        <!-- Technical Skill Matrix -->
+        <div class="resume-section-block">
+          <h3 class="resume-block-title">Technical Competencies</h3>
+          <div class="resume-skills-matrix">
+            <div><strong>Frontend:</strong> HTML5, CSS3, Flexbox, CSS Grid, JavaScript (ES6+), TypeScript, React, Next.js, WebSockets, Tailwind</div>
+            <div><strong>Backend &amp; DB:</strong> Node.js, Express, REST APIs, GraphQL, PostgreSQL, MongoDB, Redis, Prisma ORM</div>
+            <div><strong>DevOps &amp; Tools:</strong> Git/GitHub, Docker, CI/CD Actions, AWS (S3, Lambda, CloudFront), Vitest, Jest</div>
+          </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="resume-section-block">
+          <h3 class="resume-block-title">Professional Experience</h3>
+          
+          <div class="resume-job-item">
+            <div class="resume-job-header">
+              <span class="resume-job-title">Senior Full-Stack Engineer — Nexus Cloud Solutions</span>
+              <span class="resume-job-date">2023 – Present</span>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Architected telemetry and data visualization dashboards handling 2M+ API calls daily.</li>
+              <li>Engineered optimized REST microservices reducing database query latency by 60%.</li>
+              <li>Instituted TypeScript standards and CI/CD quality gates across 4 cross-functional development teams.</li>
+            </ul>
+          </div>
+
+          <div class="resume-job-item">
+            <div class="resume-job-header">
+              <span class="resume-job-title">Frontend &amp; UI Developer — PixelForge Digital</span>
+              <span class="resume-job-date">2021 – 2023</span>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Delivered 18+ high-traffic, mobile-responsive web applications with 100% cross-browser fidelity.</li>
+              <li>Created a centralized CSS variable design token system reducing CSS bundle size by 35%.</li>
+              <li>Implemented automated accessibility audits achieving 98+ scores in Google Lighthouse.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="resume-section-block">
+          <h3 class="resume-block-title">Education &amp; Credentials</h3>
+          <div class="resume-job-item">
+            <div class="resume-job-header">
+              <span class="resume-job-title">B.S. in Computer Science — University of California (GPA: 3.85 / 4.0)</span>
+              <span class="resume-job-date">2017 – 2021</span>
+            </div>
+          </div>
+          <p class="resume-cert-line">Certifications: AWS Certified Solutions Architect • Meta Frontend Professional Developer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
